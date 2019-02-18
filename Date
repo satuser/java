@@ -1,0 +1,23 @@
+mport java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+	public static void main(String[] args) {
+	 
+		//to get the current local date and time
+		LocalDateTime ld = LocalDateTime.now();
+		
+		//change the format of the data and time
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/mm/yyyy HH:mm:ss");
+		String forma = dtf.format(ld);
+		
+		
+		//to check whether the given year is leap year or not
+		MonthDay date = MonthDay.parse("--02-29");
+	    
+		System.out.println(forma+"  "+ld+ "  "+date.isValidYear(339));
+
+	}
+
+}
